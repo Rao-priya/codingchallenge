@@ -6,15 +6,18 @@ Command-line instructions below work for me on my Windows 10 laptop.
 
 The project can be built using:
 
-```ant
+```
+ant
 ```
 
 The project's tests can be run using:
 
-```ant test
+```
+ant test
 ```
 
 The build step will create the `PracticeFusionCodingChallenge` in the `dist/` directory. The project's demo program can be run using:
 
-```java -jar "dist/PracticeFusionCodingChallenge.jar"
+```
+java -jar "dist/PracticeFusionCodingChallenge.jar"
 ```
