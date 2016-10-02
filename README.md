@@ -4,6 +4,7 @@ The Java doc comments in the code has all the details, assumptions made, etc.
 
 `src/practicefusioncodingchallenge/` is the main project code.  `SimilarDoctors.java` contains the code to do the similarity processing.  `Doctor.java` is the doctor model definition.  `PracticeFusionCodingChallenge.java` is the demo program.  The test cases are in `test/practicefusioncodingchallenge/`.
 
+If Netbeans is unavailable, the project can be built at the command-line as follows (assuming ant is available):
 
 ```
 git clone https://github.com/Rao-priya/codingchallenge.git
