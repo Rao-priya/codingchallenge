@@ -39,19 +39,41 @@ public class PracticeFusionCodingChallenge {
         hcPlans.add("Anthem Blue Cross of California");
         hcPlans.add("BlueShield of California");
         myDoctor.setHealthcarePlans(hcPlans);
-
+       
+        System.out.println("Finding doctors similar to:");
+        myDoctor.printDetails();
+        
         // Next, we find doctors in allDoctors that are similar to myDoctor
         // based on a few features.
+       
+        // These two strings are used only for augmenting the output of this
+        // demo program; not required otherwise.  Keep them in lock-step with
+        // the features we will be using later.
+        String userSelectedFeatures = feature.LOCATION.toString() + ", " +
+                feature.SPECIALITY.toString() + ", " +
+                feature.ACCEPTINGNEWPATIENT.toString();
+        String userChosenPrioritization = feature.NAME.toString();
+        
         List<Doctor> result = finder.findSimilarDoctors(
                 myDoctor, feature.LOCATION, feature.SPECIALITY,
-                feature.ACCEPTINGNEWPATIENT);
+                feature.ACCEPTINGNEWPATIENT );
 
         // Finally, let's prioritize the result list, and display it.
         if (result != null && (!result.isEmpty())) {
-            // Pick an attribute to order by.  Choose from "name",
-            // "experience", "location", and "speciality".
-            String sortBy = "name";
+            // Pick an attribute to order by.  Choose from feature.NAME,
+            // feature.EXPERIENCE, feature.LOCATION, and feature.SPECIALITY.
             finder.prioritize(result, feature.NAME);
+            System.out.println();
+            System.out.println("RESULTS");
+            System.out.println("===========================");
+            System.out.println("Displaying doctors similar to " + 
+                    myDoctor.getName() + " when " + userSelectedFeatures +
+                    " features are selected.");
+            System.out.println("Found " + result.size() +
+                    " records from a total of " + allDoctors.size() +
+                    " records, and results are prioritized (ordered) by " +
+                    userChosenPrioritization + ".");
+            System.out.println();
             for (Doctor d : result) {
                 d.printDetails();
             }
