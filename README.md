@@ -4,24 +4,23 @@ The Java doc comments in the code has all the details, assumptions made, etc.
 
 `src/practicefusioncodingchallenge/` is the main project code.  `SimilarDoctors.java` contains the code to do the similarity processing.  `Doctor.java` is the doctor model definition.  `PracticeFusionCodingChallenge.java` is the demo program.  The test cases are in `test/practicefusioncodingchallenge/`.
 
-Command-line instructions below work for me on my Windows 10 laptop.
-
-The project can be built using:
 
 ```
+git clone https://github.com/Rao-priya/codingchallenge.git
+cd codingchallenge/PracticeFusionCodingChallenge
 ant
 ```
 
-The project's tests can be run using:
+While in the same directory, the project's tests can be run using:
 
 ```
 ant test
 ```
 
-The build step will create the file `PracticeFusionCodingChallenge.jar` in the `dist/` directory. The project's demo program can be run using:
+The build step will create the file `PracticeFusionCodingChallenge.jar` in the `dist/` directory, which is the demo program. It can be run using:
 
 ```
-java -jar "dist/PracticeFusionCodingChallenge.jar"
+java -jar dist/PracticeFusionCodingChallenge.jar
 ```
 
 Ideas for future improvement:
