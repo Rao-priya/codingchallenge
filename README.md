@@ -16,7 +16,7 @@ The project's tests can be run using:
 ant test
 ```
 
-The build step will create the `PracticeFusionCodingChallenge` in the `dist/` directory. The project's demo program can be run using:
+The build step will create the file `PracticeFusionCodingChallenge.jar` in the `dist/` directory. The project's demo program can be run using:
 
 ```
 java -jar "dist/PracticeFusionCodingChallenge.jar"
