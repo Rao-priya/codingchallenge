@@ -24,6 +24,14 @@ The build step will create the file `PracticeFusionCodingChallenge.jar` in the `
 java -jar dist/PracticeFusionCodingChallenge.jar
 ```
 
+Documentation can be generated using:
+
+```
+ant javadoc
+```
+
+This command will create all the documentation files in `dist/javadoc` directory.
+
 Ideas for future improvement:
 
 Make more test cases!
